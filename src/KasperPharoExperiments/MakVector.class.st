@@ -2,17 +2,18 @@
 I am a vector with origin, angle from the x axis, and a length. 
 "
 Class {
-	#name : #MakVector,
-	#superclass : #Object,
+	#name : 'MakVector',
+	#superclass : 'Object',
 	#instVars : [
 		'angle',
 		'length',
 		'origin'
 	],
-	#category : #KasperPharoExperiments
+	#category : 'KasperPharoExperiments',
+	#package : 'KasperPharoExperiments'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakVector class >> from: p1 to: p2 [
 	"create a vector with origin in p1, and angle and length to hit p2"
 	| diff |
@@ -23,48 +24,48 @@ MakVector class >> from: p1 to: p2 [
 		length: diff r
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakVector >> angle [
 
 	^ angle
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakVector >> angle: anObject [
 
 	angle := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakVector >> length [
 
 	^ length
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakVector >> length: anObject [
 
 	length := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakVector >> origin [
 
 	^ origin
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakVector >> origin: anObject [
 
 	origin := anObject
 ]
 
-{ #category : #'accessing - structure variables' }
+{ #category : 'accessing - structure variables' }
 MakVector >> x [
 	^ angle cos * length + origin x
 ]
 
-{ #category : #'accessing - structure variables' }
+{ #category : 'accessing - structure variables' }
 MakVector >> y [
 	^ angle sin * length + origin y
 ]

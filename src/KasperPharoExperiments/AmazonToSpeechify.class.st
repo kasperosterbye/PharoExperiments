@@ -6,17 +6,18 @@ bla bla""
 is rewritten to ""bal bla bla bla"", that is line shift is removed and a space is inserted instead
 "
 Class {
-	#name : #AmazonToSpeechify,
-	#superclass : #Object,
+	#name : 'AmazonToSpeechify',
+	#superclass : 'Object',
 	#instVars : [
 		'sourceFile',
 		'betterText',
 		'targetFile'
 	],
-	#category : #KasperPharoExperiments
+	#category : 'KasperPharoExperiments',
+	#package : 'KasperPharoExperiments'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 AmazonToSpeechify class >> fromTextFile: named [
 
 	| anAmazonToSpeechify |
@@ -26,7 +27,7 @@ AmazonToSpeechify class >> fromTextFile: named [
 	^anAmazonToSpeechify 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AmazonToSpeechify >> adjustText [
 	"change single letter seperated by newline by space"
 	| index endIndex|
@@ -42,12 +43,12 @@ AmazonToSpeechify >> adjustText [
 	^betterText 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AmazonToSpeechify >> betterText [
 	^ betterText
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AmazonToSpeechify >> handleIndex: index [
 	"Check that betterText at index is X'lf'y, where x and y are letters. If both are letters, change lf to space"
 	| before after|
@@ -57,20 +58,20 @@ AmazonToSpeechify >> handleIndex: index [
 		ifTrue: [ betterText at: index put: Character space ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AmazonToSpeechify >> sourceFile [
 
 	^ sourceFile
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AmazonToSpeechify >> sourceFile: anObject [
 
 	sourceFile := anObject.
 	betterText := sourceFile asFileReference contents
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 AmazonToSpeechify >> writeTargetFile [
 	targetFile := (sourceFile copyReplaceAll: '.txt' with: '-A.txt' ) asFileReference writeStream.
 	targetFile nextPutAll: betterText.

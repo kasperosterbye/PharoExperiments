@@ -2,12 +2,13 @@
 A MakVectorTest is a test class for testing the behavior of MakVector
 "
 Class {
-	#name : #MakVectorTest,
-	#superclass : #TestCase,
-	#category : #KasperPharoExperiments
+	#name : 'MakVectorTest',
+	#superclass : 'TestCase',
+	#category : 'KasperPharoExperiments',
+	#package : 'KasperPharoExperiments'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MakVectorTest >> testFromTo [
 	|vec|
 	vec := MakVector from: 0@0 to: 1@0.
@@ -20,7 +21,7 @@ MakVectorTest >> testFromTo [
 	
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MakVectorTest >> testX [
 	| vec | 
 	vec := MakVector new angle: 0; length: 2; origin: 0@0.
@@ -33,7 +34,7 @@ MakVectorTest >> testX [
 	self assert: vec x closeTo: 12
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MakVectorTest >> testY [
 	| vec | 
 	vec := MakVector new angle: Float pi / 2; length: 2; origin: 0@0.

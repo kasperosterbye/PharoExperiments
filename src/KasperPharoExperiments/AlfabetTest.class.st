@@ -2,15 +2,16 @@
 My primary purpose is to show characters or letters in short numbers to train reading them
 "
 Class {
-	#name : #AlfabetTest,
-	#superclass : #Object,
+	#name : 'AlfabetTest',
+	#superclass : 'Object',
 	#instVars : [
 		'alfabeter'
 	],
-	#category : #KasperPharoExperiments
+	#category : 'KasperPharoExperiments',
+	#package : 'KasperPharoExperiments'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> blandeOrd [
 	^ #(Skade
 Allike
@@ -50,7 +51,7 @@ Tråd
 )
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> bogstaver [
 	^ #(
 af
@@ -176,7 +177,7 @@ op
 )
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> bytAlfabet [
 	| nyeAlfabeter antal bogstavNr |
 	nyeAlfabeter := '# '.
@@ -192,14 +193,14 @@ AlfabetTest >> bytAlfabet [
 	^ Microdown asRichText: nyeAlfabeter  
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 AlfabetTest >> initialize [ 
 	alfabeter := 'bdfghjklmnoprstuvyæøå'.
 	"alfabeter := 'abcdefghijklmnopqrstuvxyzæøå'."
 	"alfabeter := 'ABCDEFGHIJKLMNOPQRSTUVXYZÆØÅ'."
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> træerstaver [
 	^ #(Ask
 Asp
@@ -234,7 +235,7 @@ Tørst
 Æble)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> vælgAlfabet: størelse [
 	| nyeAlfabeter antal tæller bogstavNr |
 	nyeAlfabeter := '# '.
@@ -251,7 +252,7 @@ AlfabetTest >> vælgAlfabet: størelse [
 	^ Microdown asRichText: nyeAlfabeter  
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> vælgAntal: antalTæller [
 	| bogstaver nyeBogstaver antal tæller bogstavNr overskrift|
 	bogstaver := BogstavTest new findUnikeBogstaver.
@@ -267,7 +268,7 @@ AlfabetTest >> vælgAntal: antalTæller [
 	^ Microdown asRichText: overskrift.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> vælgAntalLinjer: antalTæller [
 	| bogstaver nyeBogstaver antal tæller bogstavNr overskrift|
 	bogstaver := BogstavTest new findUnikeBogstaver.
@@ -283,7 +284,7 @@ AlfabetTest >> vælgAntalLinjer: antalTæller [
 	^ Microdown asRichText: overskrift.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> vælgBlandedeOrd: størelse [
 	| bogstaver nyeBogstaver antal tæller bogstavNr overskrift|
 	bogstaver := self blandeOrd.
@@ -299,7 +300,7 @@ AlfabetTest >> vælgBlandedeOrd: størelse [
 	^ Microdown asRichText: overskrift.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> vælgBogstaver: størelse [
 	| bogstaver nyeBogstaver antal tæller bogstavNr overskrift|
 	bogstaver := self bogstaver.
@@ -315,7 +316,7 @@ AlfabetTest >> vælgBogstaver: størelse [
 	^ Microdown asRichText: overskrift.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 AlfabetTest >> vælgTræer: størelse [
 	| bogstaver nyeBogstaver antal tæller bogstavNr overskrift|
 	bogstaver := self træerstaver.

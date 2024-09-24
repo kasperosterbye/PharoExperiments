@@ -4,8 +4,8 @@ Jeg er et segment af en urtepotte skjuler, som ud fra hjørnerne kan lave en svg
 sideExtra kan være #højre eller #venstre
 "
 Class {
-	#name : #MakUrtepotteSkjulerSegment,
-	#superclass : #Object,
+	#name : 'MakUrtepotteSkjulerSegment',
+	#superclass : 'Object',
 	#instVars : [
 		'a',
 		'b',
@@ -13,28 +13,29 @@ Class {
 		'd',
 		'sideExtra'
 	],
-	#category : #KasperPharoExperiments
+	#category : 'KasperPharoExperiments',
+	#package : 'KasperPharoExperiments'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakUrtepotteSkjulerSegment >> a: anObject [
 
 	a := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakUrtepotteSkjulerSegment >> b: anObject [
 
 	b := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakUrtepotteSkjulerSegment >> c: anObject [
 
 	c := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakUrtepotteSkjulerSegment >> center [
 	| lower top |
 	lower := LineSegment from: a to: d.
@@ -43,19 +44,19 @@ MakUrtepotteSkjulerSegment >> center [
 	
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakUrtepotteSkjulerSegment >> d: anObject [
 
 	d := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MakUrtepotteSkjulerSegment >> sideExtra: anObject [
 
 	sideExtra := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 MakUrtepotteSkjulerSegment >> svg [
 	| args |
 	args := { a. b. c. d. } collect: [ :p| p x asString, ' ', p y asString ].

@@ -1,13 +1,14 @@
 Class {
-	#name : #BogstavTest,
-	#superclass : #Object,
+	#name : 'BogstavTest',
+	#superclass : 'Object',
 	#instVars : [
 		'bogstaver'
 	],
-	#category : #KasperPharoExperiments
+	#category : 'KasperPharoExperiments',
+	#package : 'KasperPharoExperiments'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BogstavTest >> findUnikeBogstaver [
 	"Laver bogstaver om til bogstav->antal forekomster"
 	|substrings minLængde maxLængde minAntal maxAntal|
@@ -26,13 +27,13 @@ BogstavTest >> findUnikeBogstaver [
 	
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 BogstavTest >> initialize [ 
 	self sætBogstaverDidaktik.
 	bogstaver := bogstaver \ '"''.,0123456789-();‘’?/—–'
 ]
 
-{ #category : #'ord og bogstaver' }
+{ #category : 'ord og bogstaver' }
 BogstavTest >> sætBogstaverAndet [
 	bogstaver := 'Det er mig en glæde at byde Jer velkommen til dette seminar om de danske heder og deres kulturhistoriske betydning.
 Seminaret er det første danske bidrag til et vesteuropæisk projekt om hedernes betyd- ning som kulturlandskab. Skov- og Naturstyrelsen er gået ind i dette arbejde, fordi vi finder det vigtigt at informere den brede befolkning om den væsentlige betydning, he- den som kulturlandskab har og har haft for dansk kultur. Men også fordi det har vist sig vanskeligt at bevare de sidste hedestrækninger, hvis vi ikke inddrager kulturhistori- ske aspekter i bevaringsarbejdet.
@@ -114,7 +115,7 @@ vikles podsol eller om der udvikles sur brunjord, hvor der stadig er jordbundsdy
 Nielsen et al (1984 a og b) viste, at indvandring af eg på Hjelm hede i løbet af 60 år kunne ændre en podsoljord kraftigt i retning af en brunjord. Modsat har Andersen (1979) på Løvenholm vist, at ophør af græsning i forbindelse med Fredskovsforord- ningen fra 1805 medførte en begyndende podsolering af jorde under bøgeskov. Ander- sen mener, at podsoleringen skyldes, at der blev dannet et morlag, fordi det biologiske system ikke var i stand til at omsætte den øgede mængde organiske stof, der blev tilført jordoverfla den.'
 ]
 
-{ #category : #'ord og bogstaver' }
+{ #category : 'ord og bogstaver' }
 BogstavTest >> sætBogstaverDidaktik [
 	bogstaver := 'Dansk er ikke ét fag, men mange fag. Anskuet i et historisk perspektiv har danskfaget ændret sig meget over de seneste århundreder, blandt andet ved at mediedimensionen er kommet meget mere ind i faget end det var for 50 år siden. Anskuet i et aktuelt perspektiv anno 2020 ser faget forskelligt ud på tværs og på langs: Danskfaget på den gymnasiale uddannelse stx er fx et andet danskfag end dansk på den gymnasiale uddannelse htx. Dansk er også forskelligt på langs af uddannelsessystemet, fra folkeskole over ungdomsuddannelse til universitet og videre ud i voksenuddannelse og knopskydningen dansk som andetsprog. Derfor taler man også om de mange danskfag.
 
@@ -405,7 +406,7 @@ Et andet nordisk skud på stammen af L1/modersmålsdidaktisk forskning finder ma
 Når dette kapitel skal revideres til en 3. udgave om nogle år, forventer jeg at kunne fortælle mere om resultaterne af dén undersøgelse. Indtil da god fornøjelse med at undersøge danskfagets selv.'
 ]
 
-{ #category : #'ord og bogstaver' }
+{ #category : 'ord og bogstaver' }
 BogstavTest >> sætBogstaverSciFi [
 	bogstaver := '
 Udgivelser
@@ -562,7 +563,7 @@ Kontakt os
 RSS feed'
 ]
 
-{ #category : #'ord og bogstaver' }
+{ #category : 'ord og bogstaver' }
 BogstavTest >> sætBorgerLyst [
 	bogstaver := 'Som børn er vi så åbne overfor at lære nyt, lytte til andre, kaste os ud på det dybe. Vi tror selv på, at vi er verdensmestre til at bage boller, klippeklistre, spille fodbold, synge eller skrive digte – eller i hvert fald, at vi har så stort talent, at vi nok skal blive det om føje år. Vores forældre hjælper os til at udvikle vores talenter ved at hente og bringe os til – og betale for – masser af fritidsaktiviteter. Kommunerne, museerne og organisationerne udbyder masser af muligheder for at udvikle de unge talenter. De mest talentfulde og/ eller stædigste af øver og øver og opsøger dem, der kan lære dem at blive endnu bedre.
 Og undervejs i den proces er det helt ok at fejle, fordi alle er enige om, at det er en del af træningsprocessen og enhver ved, at et barn ikke kan gøre det perfekt fra start. Man skal krybe, før man gå. Øvelse gør mester. What doesn’t kill you makes you stronger... bare klø på...
