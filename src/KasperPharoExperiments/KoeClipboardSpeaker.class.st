@@ -1,6 +1,8 @@
 "
 I can speak the text stored in the clipboard.
 
+My basic method is speakingClipboard and stopSpeak.
+
 "
 Class {
 	#name : 'KoeClipboardSpeaker',
